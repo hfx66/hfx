@@ -1,0 +1,241 @@
+<!DOCTYPEhtml PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>星团队网站模板</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="js/checkRegister.js"></script>
+
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<!-- CuFon ends -->
+
+<style type="text/css">
+.comments {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+.comment {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.comment:last-child {
+    border-bottom: none;
+}
+.comment h4 {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+.comment-date {
+    color: #999;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.comment p {
+    margin: 5px 0 0 0;
+    color: #666;
+}
+</style>
+
+<script type="text/javascript">
+function toggleComments(id) {
+    var comments = document.getElementById(id);
+    if (comments.style.display === "none") {
+        comments.style.display = "block";
+    } else {
+        comments.style.display = "none";
+    }
+}
+
+function toggleLike(btn) {
+    btn.classList.toggle('active');
+    let countElement = btn.nextElementSibling;
+    let count = parseInt(countElement.textContent);
+    if(btn.classList.contains('active')) {
+        countElement.textContent = count + 1;
+    } else {
+        countElement.textContent = count - 1;
+    }
+}
+</script>
+
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo"><h1><a href="index.html"><span>星</span>团队<br /><small>在这里放置您最好的口号</small></a></h1></div>
+      <div class="clr"></div>
+      <div class="header_text_bg">
+        <div class="menu">
+          <ul>
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="services.html">服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <form id="form1" name="form1" method="post" action="">
+            <span>
+            <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="搜索..." />
+            </span>
+            <input name="b" type="image" src="images/search.gif" class="button" />
+          </form>
+        </div>
+        <div class="clr"></div>
+        <img src="images/header_img.jpg" alt="img" width="356" height="236" />
+        <div class="header_text_bg_resize">
+          <h2>模板许可</h2>
+          <p>这是一个由HotWebsiteTemplates.net提供的免费CSS网站模板。本作品基于Creative Commons Attribution 3.0许可证发布，这意味着您可以将其用于任何个人或商业目的，只需在形式上通过链接注明来源：<a href="http://www.moobnn.com/" title="模板在线">模板在线</a> <a href="http://guantaow.taobao.com" target="_blank">厚朴网络 淘宝店</a></p>
+        </div>
+        <div class="clr"></div>
+      </div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="body">
+    <div class="body_resize">
+      <div class="left">
+        <h2>最新<span>动态</span></h2>
+        <p><a href="#">最新项目展示</a></p>
+        <p>我们最近完成了多个重要项目，包括企业网站改版、电子商务平台开发等。每个项目都展现了我们团队的专业能力和创新精神。</p>
+        <p><a href="javascript:void(0)" onclick="toggleComments('comments1')">阅读更多 | 评论 (3)</a></p>
+        <div id="comments1" class="comments" style="display:none;">
+          <div class="comment">
+            <h4>林总 <span class="comment-date">2024-12-15</span></h4>
+            <p>企业网站改版后效果非常好，页面设计现代简洁，功能也很实用。特别是移动端的适配做得很棒，给团队点赞！</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">168</span>
+            </div>
+          </div>
+          <div class="comment">
+            <h4>周经理 <span class="comment-date">2024-08-20</span></h4>
+            <p>电商平台开发非常专业，后台管理系统很方便，订单处理流程也很顺畅。上线后销售额提升明显。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">142</span>
+            </div>
+          </div>
+          <div class="comment">
+            <h4>张女士 <span class="comment-date">2024-05-10</span></h4>
+            <p>团队的服务态度很好，技术实力强，项目进度把控得当。是一家值得长期合作的公司。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">135</span>
+            </div>
+          </div>
+        </div>
+        
+        <h2>服务<span>特色</span></h2>
+        <p>我们提供专业的网站设计和开发服务，包括：</p>
+        <ul>
+          <li>响应式网站设计</li>
+          <li>电子商务解决方案</li>
+          <li>企业网站建设</li>
+          <li>网站维护与优化</li>
+        </ul>
+        <p><a href="javascript:void(0)" onclick="toggleComments('comments2')">了解更多 | 评论 (5)</a></p>
+        <div id="comments2" class="comments" style="display:none;">
+          <div class="comment">
+            <h4>王经理 <span class="comment-date">2025-01-15</span></h4>
+            <p>响应式网站设计做得非常棒，在各种设备上显示效果都很完美。团队的技术实力和服务态度都值得肯定。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">195</span>
+            </div>
+          </div>
+          <div class="comment">
+            <h4>陈老师 <span class="comment-date">2024-09-05</span></h4>
+            <p>做教育机构网站，对设计和功能都很满意。后台管理系统特别好用，维护起来很方便。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">167</span>
+            </div>
+          </div>
+          <div class="comment">
+            <h4>张总监 <span class="comment-date">2024-07-12</span></h4>
+            <p>网站优化效果明显，百度排名提升很快。团队的SEO策略很专业，持续优化服务也很到位。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">154</span>
+            </div>
+          </div>
+          <div class="comment">
+            <h4>刘经理 <span class="comment-date">2024-05-20</span></h4>
+            <p>企业官网改版后，访问量明显提升。设计既美观又实用，完全符合我们的需求。维护服务也很及时。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">172</span>
+            </div>
+          </div>
+          <div class="comment">
+            <h4>王工程师 <span class="comment-date">2024-04-15</span></h4>
+            <p>技术团队实力很强，解决问题快速准确。系统的性能优化做得特别好。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">183</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="right">
+        <h2>侧边栏菜单</h2>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="template-info.html">模板信息</a></li>
+          <li><a href="style-demo.html">样式演示</a></li>
+          <li><a href="https://blog.csdn.net/" target="_blank">博客</a></li>
+          <li><a href="archive.html">归档</a></li>
+          <li><a href="templates.html" title="网站模板">网站模板</a></li>
+        </ul>
+        <h2>赞助商</h2>
+        <ul class="sponsors">
+            <li class="sponsors"><a href="#" title="网站模板">梦想模板</a><br />超过6,000个优质网站模板</li>
+            <li class="sponsors"><a href="#" title="WordPress主题">模板销售</a><br />优质WordPress和Joomla主题</li>
+            <li class="sponsors"><a href="#" title="实惠主机">智能主机</a><br />实惠的网络托管服务提供商</li>
+            <li class="sponsors"><a href="#" title="免费WordPress主题">免费主题布局</a><br />免费WordPress主题</li>
+            <li class="sponsors"><a href="#" title="网站建设器">网站工具</a><br />网站建设软件和工具</li>
+            <li class="sponsors"><a href="#" title="图标素材">矢量图库</a><br />免版税图标素材</li>
+        </ul>
+        <p>&nbsp;</p>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="FBG">
+    <div class="FBG_resize">
+      <div class="blok2">
+        <h2>关于我们</h2>
+        <img src="images/fbg_1.jpg" alt="图片" width="68" height="68" />
+        <p>我们是一家专业的网络技术服务公司，专注于为客户提供优质的网站设计、开发和数字营销解决方案。我们的团队由经验丰富的设计师、开发人员和营销专家组成，致力于帮助企业在数字时代取得成功。</p>
+        <p><a href="#">了解更多...</a></p>
+      </div>
+      <div class="blok">
+        <h2>图片<span>展示</span></h2>
+        <img src="images/fbg_2.jpg" alt="img" width="68" height="68" /><img src="images/fbg_3.jpg" alt="img" width="68" height="68" /><img src="images/fbg_4.jpg" alt="img" width="68" height="68" />
+         <img src="images/fbg_5.jpg" alt="img" width="68" height="68" /><img src="images/fbg_6.jpg" alt="img" width="68" height="68" /><img src="images/fbg_7.jpg" alt="img" width="68" height="68" />
+        <div class="clr"></div>
+        <h2>关于我们</h2>
+        <p>我们提供全方位的网络解决方案，包括网站设计、开发、维护、SEO优化等服务。我们的目标是帮助客户建立强大的在线品牌形象。</p>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer_resize">
+      <p>© 版权所有 星团队网站. 模板来源于 <a href="http://www.moobnn.com/" title="模板在线" target="_blank">模板在线</a> <a href="http://guantaow.taobao.com" target="_blank">厚朴网络 淘宝店</a></p>
+    </div>
+    <div class="clr"></div>
+  </div>
+</div>
+</body>
+</html>

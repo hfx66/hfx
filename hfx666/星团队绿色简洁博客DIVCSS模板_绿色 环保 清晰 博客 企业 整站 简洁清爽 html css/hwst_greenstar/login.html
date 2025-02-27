@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>用户登录 - 星团队</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.login-title {
+    text-align: center;
+    color: #6aa72d;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #6aa72d;
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 167, 45, 0.3);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #6aa72d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: #558b24;
+}
+
+.error-message {
+    display: none;
+    text-align: center;
+    color: #f44336;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    background: rgba(244, 67, 54, 0.1);
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    color: #4CAF50;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    background: rgba(76, 175, 80, 0.1);
+}
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1><a href="#"><span>Star</span>Team<br /><small>精品网站模板</small></a></h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="login-container">
+      <h2 class="login-title">用户登录</h2>
+      <form id="loginForm" onsubmit="return handleLogin(event)">
+        <div class="form-group">
+          <label for="username">用户名</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">密码</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="login-btn">登录</button>
+        <div class="success-message" id="successMessage">登录成功！正在跳转...</div>
+        <div class="error-message" id="errorMessage"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer_resize">
+      <p>© Copyright MyWebSite. Collect from <a href="http://www.moobnn.com/" title="模板在线" target="_blank">模板在线</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleLogin(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+    
+    // 重置消息
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
+    
+    // 验证用户名和密码
+    const registeredUsername = localStorage.getItem('registeredUsername');
+    const registeredPassword = localStorage.getItem('registeredPassword');
+    
+    if (username === registeredUsername && password === registeredPassword) {
+        // 登录成功
+        successMessage.style.display = 'block';
+        document.querySelector('.login-btn').disabled = true;
+        
+        // 设置登录状态
+        localStorage.setItem('isLoggedIn', 'true');
+        
+        // 延迟跳转到主页
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 2000);
+    } else {
+        // 登录失败
+        errorMessage.textContent = '用户名或密码错误';
+        errorMessage.style.display = 'block';
+    }
+    
+    return false;
+}
+</script>
+</body>
+</html> 

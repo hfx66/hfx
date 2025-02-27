@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>星团队网站模板</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<!-- CuFon ends -->
+
+<style type="text/css">
+.comments {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+.comment {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.comment:last-child {
+    border-bottom: none;
+}
+.comment h4 {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+.comment-date {
+    color: #999;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.comment p {
+    margin: 5px 0 0 0;
+    color: #666;
+}
+</style>
+
+<script type="text/javascript">
+function toggleComments(id) {
+    var comments = document.getElementById(id);
+    if (comments.style.display === "none") {
+        comments.style.display = "block";
+    } else {
+        comments.style.display = "none";
+    }
+}
+
+function toggleLike(btn) {
+  btn.classList.toggle('active');
+  let countElement = btn.nextElementSibling;
+  let count = parseInt(countElement.textContent);
+  if(btn.classList.contains('active')) {
+    countElement.textContent = count + 1;
+  } else {
+    countElement.textContent = count - 1;
+  }
+}
+</script>
+
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo"><h1><a href="index.html"><span>Star</span>Team<br /><small>Put your best slogan here</small></a></h1></div>
+      <div class="clr"></div>
+      <div class="header_text_bg">
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="services.html">服务</a></li>
+          <li><a href="about.html" class="active">关于我们</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+        </ul>
+      </div>
+      <div class="search">
+        <form id="form1" name="form1" method="post" action="">
+          <span>
+          <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+          </span>
+          <input name="b" type="image" src="images/search.gif" class="button" />
+        </form>
+      </div>
+      <div class="clr"></div>
+      <img src="images/tech_header.jpg" alt="科技创新" width="356" height="236" />
+<div class="header_text_bg_resize">
+  <h2>关于我们</h2>
+  <p><span>我们是您值得信赖的网络技术合作伙伴，为您提供专业的网站设计和开发服务。</span></p>
+  <p>我们拥有丰富的行业经验和专业知识，能够为您提供最优质的解决方案。<a href="#">阅读更多</a></p>
+</div>
+      
+      
+      
+      <div class="clr"></div>
+      </div>
+      
+               
+    </div>
+    <div class="clr"></div>
+  </div>
+        <div class="clr"></div>
+  <div class="body">
+    <div class="body_resize">
+      <div class="left">
+        <h2>关于<span>我们</span></h2>
+        <p><a href="#">星团队</a>成立于多年前，是一家专注于网络技术服务的专业公司。我们的团队由经验丰富的设计师、开发人员和营销专家组成，致力于为客户提供最优质的服务。</p>
+        <p>我们的服务范围包括：网站设计、开发、维护、SEO优化、数字营销等。我们注重细节，追求完美，确保每个项目都能达到客户的期望。</p>
+        <p>我们的目标是帮助企业在数字时代获得成功，建立强大的在线品牌形象。</p>
+        <p><a href="javascript:void(0)" onclick="toggleComments('comments1')">阅读更多 | 评论 (5)</a></p>
+        <div id="comments1" class="comments" style="display:none;">
+          <div class="comment">
+            <h4>王总经理 <span class="comment-date">2024-12-20</span></h4>
+            <p>和星团队合作三年多了，他们的专业水平和服务质量一直保持很高的水准。团队响应速度快，技术实力强，是值得信赖的长期合作伙伴。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">128</span>
+            </div>
+          </div>
+          <div class="comment">
+            <h4>李技术总监 <span class="comment-date">2024-10-15</span></h4>
+            <p>作为一家科技公司，我们对技术要求很高。星团队的开发人员技术过硬，解决问题思路清晰，多次帮我们攻克了技术难关。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">156</span>
+            </div>
+          </div>
+          <div class="comment">
+            <h4>张市场经理 <span class="comment-date">2024-08-25</span></h4>
+            <p>公司的数字营销方案很专业，帮我们制定的推广策略效果显著。特别是在社交媒体运营方面，为我们带来了很多精准客户。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">145</span>
+            </div>
+          </div>
+          <div class="comment">
+            <h4>陈总 <span class="comment-date">2024-06-18</span></h4>
+            <p>星团队的项目管理非常规范，每个阶段都有详细的进度报告。他们不仅注重技术实现，也很重视用户体验，是一家非常靠谱的公司。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">187</span>
+            </div>
+          </div>
+          <div class="comment">
+            <h4>刘设计师 <span class="comment-date">2024-04-10</span></h4>
+            <p>作为一名设计师，我对他们的设计水平印象深刻。无论是UI设计还是平面设计，都能准确把握客户需求，作品既美观又实用。</p>
+            <div class="like-container">
+              <span class="like-btn" onclick="toggleLike(this)">❤</span>
+              <span class="like-count">169</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <h2>侧边栏菜单</h2>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="#">模板信息</a></li>
+          <li><a href="#">样式演示</a></li>
+          <li><a href="https://blog.csdn.net/" target="_blank">博客</a></li>
+          <li><a href="#">归档</a></li>
+          <li><a href="templates.html" title="网站模板">网站模板</a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="FBG">
+    <div class="FBG_resize">
+      <div class="blok2">
+        <h2>关于我们</h2>
+        <img src="images/fbg_1.jpg" alt="图片" width="68" height="68" />
+        <p>我们是一家专业的网络技术服务公司，致力于为客户提供最优质的网站解决方案。我们的团队由经验丰富的设计师和开发人员组成，能够为您提供专业的网站设计、开发和维护服务。</p>
+        <p>我们注重每个细节，确保为客户提供最好的服务体验。我们的目标是帮助企业在数字时代获得成功，建立强大的在线品牌形象。<br />
+          我们提供全方位的服务，包括：响应式网站设计、电子商务解决方案、企业网站建设、SEO优化等。让我们一起携手，创造更好的数字未来。<br />
+        <a href="#">了解更多...</a></p>
+      </div>
+      <div class="blok">
+        <h2>图片<span>展示</span></h2>
+        <img src="images/fbg_2.jpg" alt="img" width="68" height="68" /><img src="images/fbg_3.jpg" alt="img" width="68" height="68" /><img src="images/fbg_4.jpg" alt="img" width="68" height="68" />
+         <img src="images/fbg_5.jpg" alt="img" width="68" height="68" /><img src="images/fbg_6.jpg" alt="img" width="68" height="68" /><img src="images/fbg_7.jpg" alt="img" width="68" height="68" />
+        <div class="clr"></div>
+        <h2>服务简介</h2>
+        <p>我们提供专业的网站设计和开发服务，包括企业网站建设、电子商务网站开发、移动应用开发等。我们的团队将为您提供最优质的解决方案。</p>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer_resize">
+      <p>© Copyright MyWebSite. Collect from <a href="http://www.moobnn.com/" title="模板在线" target="_blank">模板在线</a> <a href="http://guantaow.taobao.com" target="_blank">厚朴网络 淘宝店</a></p>
+    </div>
+    <div class="clr"></div>
+  </div>
+</div>
+</body>
+</html>
